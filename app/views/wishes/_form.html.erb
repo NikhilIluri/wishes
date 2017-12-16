@@ -1,0 +1,74 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.form-control {
+  border-radius: 0;
+}
+textarea {
+  resize: none;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 0;
+  transition: .2s;
+}
+.btn:hover, .btn:focus {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #000;
+}
+h3, h4 {
+  margin: 10px 0 30px 0;
+  letter-spacing: 10px;      
+  font-size: 20px;
+  color: #111;
+}
+.container {
+  padding: 80px 120px;
+}
+</style>
+</head>
+
+<%= form_with(model: wish, local: true) do |form| %>
+  <% if wish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
+
+      <ul>
+      <% wish.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div id="contact" class="container">
+  <h3 class="text-center">Wish your matess</h3>
+  <p class="text-center"><em>Create wishes on your name!</em></p>
+
+  <div class="row">
+  <div class="col-md-4">
+  <p><span><a href="https://www.youtube.com/watch?v=YtQLboCgUBI"><i class="fa fa-youtube-play" style="font-size:48px;color:red"></a></i></span></p>
+  <p><a href="https://www.youtube.com/watch?v=YtQLboCgUBI"><span>Check out some of our videos</span></p></a>
+  <p><span></span></p>
+</div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="wish_name" name="wish[name]" placeholder="Your Name" type="text" required>
+        </div>
+      <div class="row">
+        <div class="col-md-12 form-group" style="margin-left:-49%">
+          <button class="btn pull-right" type="submit" name="commit" data-disable-wth="Create Wish">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
