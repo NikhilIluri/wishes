@@ -12,6 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20171213160037) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "adminpack"
+
   create_table "wishes", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
