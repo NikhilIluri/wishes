@@ -1,9 +1,9 @@
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
- 
+
 </style>
 </head>
 <%= form_with(model: wish, local: true) do |form| %>
@@ -18,18 +18,59 @@
       </ul>
     </div>
   <% end %>
-  <div class="container">
-    <div class="col-md-8" style="margin-top:5%;margin-left:20%">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="wish_name" name="wish[name]" placeholder="Your Name" type="text" required>
+  <div class="container" style="padding:80px 109px">  
+    <div class="row" style="width:122%">
+        <div class="col-md-4">
+        Follow us on<br>
+        
+        <a href="https://www.youtube.com/channel/UCxOUNu8KufyOZxygYRs8wrg"><i class="fa fa-youtube-play" style="font-size:35px;color:red"></i></a>
+        <a href="https://www.facebook.com/srinivas.kotha.16"><i class="fa fa-facebook-square" style="font-size:32px;color:#3b5998"></i></a>
+        <a href="https://www.instagram.com/iluri_nikhil/"><i class="fa fa-instagram" style="font-size:35px;color:#fb3958"></i></a>
         </div>
-      </div>  
-      <div class="row">
-        <div class="col-md-12 form-group" style="margin-left:30%">
-          <button class="btn" type="submit" name="commit" data-disable-wth="Create Wish">Create Wishes</button>
+        <div class="col-md-4">
+            <form>
+				<div class="form-group">
+        			<label for="validate-text">Create wishes on your name</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="wish[name]" id="wish_name" placeholder="Your name" required>
+					</div>
+				</div>
+                <button type="submit" class="btn btn-primary" name="commit" data-disable-wth="Create Wish">Create wishes</button>
+            </form>
         </div>
-      </div>
+        <div class="col-md-4" id="demo">
+          
+        </div>
     </div>
-  </div>
+</div>
 <% end %>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2018 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML ="Countdown"+"<br>"+ days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
