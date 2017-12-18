@@ -2,157 +2,123 @@
 <html lang="en">
 <head>
     <title>Happy New Year 2018</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-    html,body{
-      margin:0;
-      height:120%;
-      font-family: 'Josefin Sans', sans-serif;
+    body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
     }
-    .header{
-      position:relative;
-      overflow:hidden;
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      align-content: flex-start;
-      height:50vw;
-      min-height:400px;
-      max-height:550px;
-      min-width:300px;
-      color:#eee;
+    .container {
+      padding: 80px 120px;
     }
-    .header:after{
-      content:"";
-      width:100%;
-      height:40%;
-      position:absolute;
-      bottom:0;
-      left:0;
-      z-index:-1;
-     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(27,32,48,1) 100%);
+    .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(50%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
-    .header:before{
-      content:"";
-      width:100%;
-      height:100%;
-      position:absolute;
-      top:0;
-      left:0;
-        -webkit-backface-visibility: hidden;
-        -webkit-transform: translateZ(0) scale(1.0, 1.0);
-        transform: translateZ(0);
-      background:#1B2030 url("/assets/la.jpg") top center no-repeat;
-      background-size:cover;
-      background-attachment:fixed;
-      animation: grow 60s  linear 10ms infinite;
-      transition:all 0.2s ease-in-out;
-      z-index:-2
-    }
-    .header a{
-      color:#eee
-    }
-    .menu{
-      display:block;
-      width:30px;
-      height:30px;
-      border:2px solid #fff;
-      border-radius:3px;
-      position:absolute;
-      right:20px;
-      top:20px;
-      text-decoration:none
-    }
-    .menu:after{
-      content:"";
-      display:block;
-      width:20px;
-      height:3px;
-      background:#fff;
-      position:absolute;
-      margin:0 auto;
-      top:5px;
-      left:0;
-      right:0;
-      box-shadow:0 8px, 0 16px
-    }
-    .logo{
-      border:2px solid #fff;
-      border-radius:3px;
-      text-decoration:none;
-      display:inline-block;
-      margin:20px;
-      padding:5px 10px;
-      font-weight:600;
-      font-size:1.2em;
-      box-sizing:border-box
-      color:black;
-    }
-    .sides, .info{
-      flex: 0 0 auto;
-      width:50%
-    }
-    .info{
-      width:100%;
-      padding:15% 10% 0 10%;
-      text-align:center;
-      text-shadow:0 2px 3px rgba(0,0,0,0.2)
-    }
-    .author{
-      display:inline-block;
-      width:50px;
-      height:50px;
-      border-radius:50%;
-      background:image-url("/assets/images/la.jpg") center no-repeat;
-      background-size:cover;
-      box-shadow:0 2px 3px rgba(0,0,0,0.3);
-      margin-bottom:3px
-    }
-    .info h4, .meta{
-      font-size:0.7em
-    }
-    .meta{
-      font-style:italic;
-    }
-    @keyframes grow{
-      0% { transform:scale(1)}
-      50% { transform:scale(1.2)}
-    }
-    .content{  
-      padding:5% 10%;
-      text-align:justify
-    }
-    .btn{
-      color:#333;
-      border:2px solid;
-      border-radius:3px;
-      text-decoration:none;
-      display:inline-block;
-      padding:5px 10px;
-      font-weight:600
-    }
-    a.logo{
-      color:#6b0707;
-    }
-    
-    .twtr{
-      margin-top:100px
-    }.btn.twtr:after{content:"\1F426";padding-left:5px}
+  }
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #101010 !important;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
     </style>
 </head>
-<div class="header">
-<div class="sides">
-  <a class="logo">Wish Your Mates</a>
-</div>
-<div class="sides"> <a href="" class="menu">-</a></div>
-<div class="info">
-<h3>HAPPY NEW YEAR 2018!!</h3>
-  <h1>Write it on your heart that every day is the best day in the year.</h1>
-  <div class="meta">
-    <a  href="https://twitter.com/nodws" target="_b" class="author"></a><br>
-    <h3>By Srinivas Kotha on December 18, 2017</h3>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top" style="border-color:black">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="">Wish your mates</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="">HOME</a></li>
+      </ul>
+    </div>
   </div>
-</div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+       <%= image_tag("/assets/ny.jpg", alt: "New Year", size: "1200x700")%>
+        <div class="carousel-caption">
+          <h3>New Year 2018</h3>
+          <p>Write it on your heart that everyday is the best day in the year.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+      <%= image_tag("/assets/nb.jpg", alt: "New Year", size: "1200x700")%>
+        <div class="carousel-caption">
+          <h3>Bye 2017</h3>
+          <p>I hope you get all your dream in your hand till end of the year.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+      <%= image_tag("/assets/la.jpg", alt: "New Year", size: "1200x700")%>
+        <div class="carousel-caption">
+          <h3>Welcome 2018</h3>
+          <p>“We all get the exact same 365 days. The only difference is what we do with them.”</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 </div>
     <%= yield %>
   </body>
