@@ -19,9 +19,9 @@ w3-container{
   </div>
 </div>
 </div>
-<b><p id="demo" style="text-align:center;font-size:30px"></p></b>
-<center><a href="whatsapp://send?text=https://newyearwishes.herokuapp.com/wishes/<%=@wish.id%>">Share it on<span> </span><i class="fa fa-whatsapp" style="font-size:30px;color:green"></a></i></center>
-<center><i class="fa fa-envelope-open-o" style="font-size:26px;color:red"></i> Total wishes created:<%= @wish.id %></center><br>
+<b><p id="demo" style="text-align:center;font-size:25px"></p></b>
+<center><a href="whatsapp://send?text=https://newyearwishes.herokuapp.com/wishes/<%=@wish.id%>">Share it on<span> </span><i class="fa fa-whatsapp" style="font-size:30px;color:green"></a></i></center><br>
+<center><i class="fa fa-bullhorn" style="font-size:26px;color:red"></i><%= link_to ' Create wishes on your name', root_path%></center><br>
 <br><center>
 Follow us on<br>
 
@@ -29,7 +29,7 @@ Follow us on<br>
 <a href="https://www.facebook.com/srinivas.kotha.16"><i class="fa fa-facebook-square" style="font-size:32px;color:#3b5998"></i></a>
 <a href="https://www.instagram.com/iluri_nikhil/"><i class="fa fa-instagram" style="font-size:35px;color:#fb3958"></i></a>
 </center>
-<center><%= link_to 'Create wishes on your name', root_path%> </center>
+
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 1, 2018 00:00:01").getTime();
