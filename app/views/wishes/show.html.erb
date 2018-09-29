@@ -13,7 +13,7 @@ w3-container{
 <p><center>Happy birthday! I hope all your birthday wishes and dreams come true.!</center></p>
 <% $count = 0%>  
 <div class="w3-card-4" style="width:50%;margin-left:27%" >
-  <img src="srinivas.jpg" alt="Greetings" style="width:100%">
+  <%= image_tag("srinivas.jpg", alt: "Happy Birthday", width: "100%")%>
   <div class="w3-container w3-center">
     <p>Wishes from <b>"<%= @wish.name %>"</b></p>
   </div>
